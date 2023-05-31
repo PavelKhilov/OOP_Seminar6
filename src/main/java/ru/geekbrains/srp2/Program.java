@@ -11,8 +11,9 @@ public class Program {
 
         System.out.println("Укажите заказ:");
         Order order = new Order("", "", 0, 0);
-        order.inputFromConsole();
-        order.saveToJson();
-
+        InputFromConsole input = new InputFromConsole(order);
+        input.inputFromConsole(order);
+        SaveToJson save = new SaveToJson(order);
+        save.saveToJson();
     }
 }
